@@ -20,7 +20,7 @@ class AWS_EMAIL2:
        result = r.json()
        dataForAllDays = result['Time Series (5min)']
        now = datetime.datetime.now()
-       #self.currentStock = self.amount* float(now.strftime("%Y-%m-%d %H:%M:%S")].get("1. open", "none"))     
+           
        self.currentStock = self.amount* float(dataForAllDays['2019-04-09 16:00:00'].get("1. open", "none"))
        return self.currentStock
    
